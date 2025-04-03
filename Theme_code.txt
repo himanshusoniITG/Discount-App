@@ -1,0 +1,47 @@
+    <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+    <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
+      {{ 'accessibility.loading' | t }}
+    </p>
+
+<div class="discount-container">
+    <input type="text" id="discountCode" placeholder="Enter Discount Code">
+    <button id="applyDiscount" class="button">Apply Discount</button>
+  
+    <p id="discountMessage"></p>
+</div>
+                          
+  </form>
+</cart-items>
+
+<style>
+  
+ .discount-container {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0 0;
+    max-width: 320px;
+}
+  
+#discountCode {
+  
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+ 
+}
+
+#discountCode:focus {
+    border-color: #00800075;
+    box-shadow: 0 0 5px green;
+}
+
+#discountCode::placeholder {
+    color: #999;
+}
+ 
+</style> 
